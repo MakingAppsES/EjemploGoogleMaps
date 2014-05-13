@@ -1,8 +1,35 @@
-<fragment
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/map"
-    tools:context=".MainActivity"
-    android:name="com.google.android.gms.maps.SupportMapFragment"/>
+    tools:context=".MainActivity">
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.ejemplogooglemaps.app.MainActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    <Button android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/button2"
+        android:onClick="moveCamera"
+        android:text="UGR" />
+    <Button android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="animateCamera"
+        android:text="Mi Posición" />
+    <Button android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/button2"
+        android:onClick="addMarker"
+        android:text="Marcador" />
+</RelativeLayout>
